@@ -1,0 +1,154 @@
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  max-width: 800px;
+  padding: 10px 14px;
+  margin: auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .profileImg {
+  width: 35px;
+  height: 35px;
+  border: 1px solid black;
+  border-radius: 100%;
+  overflow: hidden;
+}
+header .profileImg img {
+  width: 100%;
+}
+header .search {
+  display: flex;
+  align-items: center;
+  border-radius: 50px;
+  padding: 5px 16px;
+  background: grey;
+  width: 60%;
+}
+header .search i {
+  padding-right: 10px;
+}
+header .search input[type=text] {
+  border: 0;
+  background: 0;
+  padding-left: 10px 0;
+  font-size: 12px;
+  color: #333;
+  outline: 0;
+}
+header .search input[type=text]::-moz-placeholder {
+  color: #999;
+}
+header .search input[type=text]::placeholder {
+  color: #999;
+}
+
+nav {
+  background: rgb(255, 255, 255);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  max-width: 800px;
+  padding: 7px 0;
+  border: 1px solid black;
+  transition: all 0.2s ease-in-out;
+}
+nav .icon {
+  font-size: 27px;
+  cursor: pointer;
+}
+nav .icon a {
+  color: #000;
+  text-decoration: none;
+}
+
+.scrollNav {
+  opacity: 0.4;
+}
+
+.banner {
+  background: #333;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+.banner .back {
+  background-color: #9c9c9c;
+  background-image: url(bugatti.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-blend-mode: multiply;
+  height: auto;
+  max-height: 340px;
+  position: relative;
+}
+.banner .back .head-note {
+  position: absolute;
+  margin-top: auto;
+  border: 1px solid red;
+  bottom: 0;
+  color: #fff;
+}
+.banner .back .head-note h1 {
+  margin-bottom: 0;
+}
+
+.tweetbtn {
+  position: fixed;
+  width: 100%;
+  max-width: 800px;
+  bottom: 130px;
+  transition: all 0.2s ease-in-out;
+}
+.tweetbtn .btn {
+  position: absolute;
+  right: 10px;
+  display: flex;
+  justify-self: center;
+  background: rgb(0, 132, 209);
+  border-radius: 100%;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.07), 0 12px 48px -12px rgba(0, 0, 0, 0.14);
+  width: 60px;
+  height: 60px;
+}
+.tweetbtn .btn i {
+  margin: auto;
+  font-size: 23px;
+  color: #fff;
+}
+
+.showtweetbtn {
+  opacity: 0.4;
+}
+
+.trend {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 22px;
+  cursor: pointer;
+}
+.trend .info h2 {
+  margin: 2px 0 4px 0;
+}
+.trend .option {
+  cursor: pointer;
+}
+.trend .option:hover {
+  color: rgb(0, 132, 209);
+}
+.trend .showmore {
+  margin-bottom: 20px;
+  color: rgb(0, 132, 209);
+}/*# sourceMappingURL=explore.css.map */
