@@ -32,11 +32,9 @@ window.addEventListener("scroll", ()=> {
   let headHeight = head.getBoundingClientRect().height
   if(toTop > headHeight){
     head.style = `position: fixed;`
-    // head.classList.add('head-position')
   }
   else{
     head.style = 'position: static'
-    // head.classList.remove('head-position')
   }
 });
 //end 
@@ -167,16 +165,16 @@ function createPostTweet(input){
   TweeT.innerHTML = `
   <div class="tweetInfo">
       <div class="profilePic">
-          <img src="images/GFeMGHpaAAAnaTF.jpeg" alt="">
+          <img src="Images/profile pics/20240310_144314.jpg" alt="elvivx-profile-picture">
       </div>
 
       <div class="tweetContainer">
           <div class="info">
-              <span class="name">John bone Doe</span>
+              <span class="name">Elvivx</span>
               <span class="verified">
                   <i class="fa-solid fa-circle-check"></i>
               </span>
-              <span class="username">@johnDoe</span>
+              <span class="username">@elvivx</span>
               <span class="dot">·</span>
               <span class="timeStamp">${newdate}</span>
               <span class="option">
@@ -196,7 +194,7 @@ function createPostTweet(input){
                         <i class="fa-regular fa-face-meh-blank"></i>
                     </div>
                     <div class="text">
-                        <span>Add/remove from @movieplug from lists</span>
+                        <span>Add/remove from @elvivx from lists</span>
                     </div>
                 </div>
               </div>
@@ -206,7 +204,7 @@ function createPostTweet(input){
               <p class="text">
                   ${textValue}
               </p>
-              <img src="Images/wallpaperflare.com_wallpaper (9).jpg" alt="">
+              <!-- <img src="Images/wallpaperflare.com_wallpaper (9).jpg" alt=""> -->
 
               <div class="tweetBtns">
                   <div class="interactionBtns">
@@ -361,9 +359,13 @@ mobileTweet.addEventListener('click',()=>{
 closeModal.onclick = () => {
   postModal.style.display = "none"
 }
-window.addEventListener('resize',()=>{
-  postModal.style.display = "none"
-})
+// window.addEventListener('resize',()=>{
+//   // postModal.style.display = "none"
+//   if(window.screen.width <= 809 ){
+//     postModal.style.display = "block"
+//   }
+//   console.log(window.screen.width)
+// })
 const modalPostBtn = document.querySelector('.post-modal .post-btn')
 const modalInput = document.querySelector('.post-modal .modal-input')
 modalPostBtn.onclick = () => {
@@ -407,37 +409,69 @@ modalInput.addEventListener('focusin',()=>{
 //Data for tweets, trends and toFollow sections
 tweetData = [
   {
-    name:  'John Doe',
-    username: "elvivx",
-    profileImg:'hey',
+    name:  'CID',
+    username: "theonecid",
+    profileImg:'Images/profile pics/20240107_114917.jpg',
     verified: 'fa-solid fa-circle-check',
     date: new Date().getDay() + " Feb",
-    tweet:"I'm loving this #JavaScript course! It's really helping me understand the language.",
+    img: 'Images/20240311_120501.jpg',
+    tweet:"Nothing Phone 2 Vs Galaxy S24 front-design🔥 <br/><br/>Look at those bezels <br/>Samsung simply killed it🤯🤯" ,
     likes: Math.floor(Math.random()*132),
     comments: Math.floor(Math.random()*131),
     retweets: Math.floor(Math.random()*134),
     chart: Math.floor(Math.random()*234),
-    tags:'#javascript #coding #webdev'
+    tags:''
   },
   {
-    name:  'John Doe',
-    username: "elvivx",
-    profileImg:'hey',
+    name:  'Invis',
+    username: "invis4yo",
+    profileImg:'Images/profile pics/20240107_114844.jpg',
     verified: 'fa-solid fa-circle-check',
     date: new Date().getDate() + " Feb",
-    tweet:"I'm loving this #JavaScript course! It's really helping me understand the language.",
+    tweet:"No one <br/><br/>8 year old me:",
+    img: 'Images/20240311_120535.jpg',
     likes: Math.floor(Math.random()*132),
     comments: Math.floor(Math.random()*131),
     retweets: Math.floor(Math.random()*134),
     chart: Math.floor(Math.random()*234),
-    tags:'#javascript #coding #webdev'
-  },{
-    name:  'John Doe',
-    username: "elvivx",
-    profileImg:'hey',
+    tags:''
+  },
+  {
+    name:  "fun cats",
+    username: "catshouldn't",
+    profileImg:'Images/profile pics/20231231_124613.jpg',
+    verified: 'fa-solid fa-circle-check',
+    date: new Date().getDay() + " Feb",
+    tweet:"",
+    img: 'Images/20240311_120552.jpg',
+    likes: Math.floor(Math.random()*132),
+    comments: Math.floor(Math.random()*131),
+    retweets: Math.floor(Math.random()*134),
+    chart: Math.floor(Math.random()*234),
+    tags:''
+  },
+   {
+    name:  'funny memes',
+    username: "funmemes",
+    profileImg:'Images/profile pics/20231122_172158.jpg',
     verified: 'fa-solid fa-circle-check',
     date: new Date().getDay() + " Feb",
     tweet:"I'm loving this #JavaScript course! It's really helping me understand the language.",
+    img: 'Images/20240311_120543.jpg',
+    likes: Math.floor(Math.random()*132),
+    comments: Math.floor(Math.random()*131),
+    retweets: Math.floor(Math.random()*134),
+    chart: Math.floor(Math.random()*234),
+    tags:''
+  },
+  {
+    name:  'Dev meme',
+    username: "devsmeme",
+    profileImg:'Images/profile pics/20240121_143633.jpg',
+    verified: 'fa-solid fa-circle-check',
+    date: new Date().getDate() + " Feb",
+    tweet:"Difference between the two....",
+    img: 'Images/20240311_120446.jpg',
     likes: Math.floor(Math.random()*132),
     comments: Math.floor(Math.random()*131),
     retweets: Math.floor(Math.random()*134),
@@ -457,9 +491,29 @@ trendData = [
     postCount: '4,869'
   },
   {
-    category:'Enginerring',
-    topic: 'Lamborghini',
-    postCount: '2,869'
+    category:'politics',
+    topic: 'Peter Obi',
+    postCount: '23k'
+  },
+  {
+    category:'Entertainment',
+    topic: 'Will Smith',
+    postCount: '44.2k'
+  },
+  {
+    category:'Entertainment',
+    topic: 'John Cena',
+    postCount: '23k'
+  },
+  {
+    category:'',
+    topic: 'Calvinism',
+    postCount: '2,434'
+  },
+  {
+    category:'Game of Thrones',
+    topic: 'Game of Thrones',
+    postCount: '4,399'
   },
   {
     category:'Business & Finance',
@@ -467,192 +521,174 @@ trendData = [
     postCount: '4,869'
   },
   {
-    category:'Enginerring',
-    topic: 'Lamborghini',
-    postCount: '2,869'
+    category:'',
+    topic: 'Elon',
+    postCount: '126k'
+  },
+  {
+    category:'',
+    topic: 'Jesus Christ',
+    postCount: '894.2k'
+  },
+  {
+    category:'Food',
+    topic: 'Egusi',
+    postCount: '2,369'
+  },
+  {
+    category:'Entertainment',
+    topic: 'Kakashi',
+    postCount: '3,749'
   },
   {
     category:'Business & Finance',
-    topic: 'Dollar to naira',
-    postCount: '4,869'
+    topic: 'Binance',
+    postCount: '19.46k'
   },
   {
-    category:'Enginerring',
-    topic: 'Lamborghini',
-    postCount: '2,869'
+    category:'Politics',
+    topic: 'Islam',
+    postCount: '213.7k'
   },
   {
-    category:'Business & Finance',
-    topic: 'Dollar to naira',
-    postCount: '4,869'
+    category:'',
+    topic: '#becometelecel',
+    postCount: '1,534'
   },
   {
-    category:'Enginerring',
-    topic: 'Lamborghini',
-    postCount: '2,869'
-  },
-  {
-    category:'Business & Finance',
-    topic: 'Dollar to naira',
-    postCount: '4,869'
-  },
-  {
-    category:'Enginerring',
-    topic: 'Lamborghini',
-    postCount: '2,869'
-  },
-  {
-    category:'Business & Finance',
-    topic: 'Dollar to naira',
-    postCount: '4,869'
-  },
-  {
-    category:'Enginerring',
-    topic: 'Lamborghini',
-    postCount: '2,869'
-  },
-  {
-    category:'Business & Finance',
-    topic: 'Dollar to naira',
-    postCount: '4,869'
-  },
-  {
-    category:'Enginerring',
-    topic: 'Lamborghini',
-    postCount: '2,869'
-  },
-  {
-    category:'Business & Finance',
-    topic: 'Dollar to naira',
-    postCount: '4,869'
+    category:'Music',
+    topic: 'Emeka',
+    postCount: '7,819'
   }
 ]
 toFollowData = [
   {
-    userImg: "",
-    user: "Collins",
-    username: "linsxzz"
+    userImg: "Images/profile pics/20240107_114917.jpg",
+    user: "Linzxx",
+    username: "linsxx",
+    bio: "Exploring Africa’s tech space + Sharing my discoveries | Founded @uruggohq | Tech Entrepreneur | Django & Sveltekit | STEEZE JESU ☘️"
   },
   {
-    userImg: "",
-    user: "Collins",
-    username: "linsxzz"
+    userImg: "Images/profile pics/20240121_143633.jpg",
+    user: "Centurion1307",
+    username: "centurion1307",
+    bio: "Cast member of @txr_podcast Gaming Entertainment Enthusiast. Keeper of The Gaming FanBoy."
   },
   {
-    userImg: "",
-    user: "Collins",
-    username: "linsxzz"
+    userImg: "Images/profile pics/20231122_172158.jpg",
+    user: "GigaBasedDad",
+    username: "GigaBasedDad",
+    bio: "Unapologetically Christian and Based. Husband and Father. Pro: God, Family, Freedom, Homesteading, Scripture, Memes, Homeschooling, Hunting, Community."
   },
   {
-    userImg: "",
-    user: "Collins",
-    username: "linsxzz"
+    userImg: "Images/profile pics/20231231_124613.jpg",
+    user: "ShitpostGate",
+    username: "ShitpostGate",
+    bio: "Love Shitposting and posting whatever I want/mostly memes/some personal stuff I like. I just like screwing around. Love old school stuff including weapons."
   },
   {
-    userImg: "",
-    user: "Collins",
-    username: "linsxzz"
+    userImg: "Images/profile pics/20240121_143633.jpg",
+    user: "Science girl",
+    username: "gunsnrosesgirl3",
+    bio: "science in context, art history and some puzzles to solve"
   },
   {
-    userImg: "",
-    user: "Collins",
-    username: "linsxzz"
+    userImg: "Images/profile pics/20231231_124613.jpg",
+    user: "rare insults",
+    username: "insultsrare",
+    bio: "the most unique insults on the planet"
   },
   {
-    userImg: "",
-    user: "Collins",
-    username: "linsxzz"
+    userImg: "Images/profile pics/20231122_172158.jpg",
+    user: "Holly - I like tech",
+    username: "AnxiouslyHolly",
+    bio: "Fan of Samsung/Android | OneUI & IOS"
   },
   {
-    userImg: "",
-    user: "Collins",
-    username: "linsxzz"
+    userImg: "Images/profile pics/20240121_143633.jpg",
+    user: "Shon",
+    username: "0xShon",
+    bio: "9 |Web3 & AI🤿|Tech enthusiast by Day, Code Ninja by Night🛠️"
   },
   {
-    userImg: "",
-    user: "Collins",
-    username: "linsxzz"
+    userImg: "Images/profile pics/20231231_124613.jpg",
+    user: "Hourly memes",
+    username: "hourly_shitpost",
+    bio: "the best memes ever created… we wouldn’t be here without them (NO NSFW PROMOS)"
   },
   {
-    userImg: "",
-    user: "Collins",
-    username: "linsxzz"
+    userImg: "Images/profile pics/20240107_114844.jpg",
+    user: "Corn",
+    username: "upblissed",
+    bio: "LLS🕊️ LLC🕊️ LLB🕊️ LLN🕊️ LLI🕊️ LLK🕊️ LLG💔 LLT👼🏾 LLO🕊️💔 AND IT’S STILL FUK DA OPPS💔🖕 #WAMMYFREE🤫𐕣🪬 📧: salim@devourtalent.com"
   },
   {
-    userImg: "",
-    user: "Collins",
-    username: "linsxzz"
+    userImg: "Images/profile pics/20231231_124613.jpg",
+    user: "I like food",
+    username: "messedupfoods",
+    bio: "food enjoyer"
   },
   {
-    userImg: "",
-    user: "Collins",
-    username: "linsxzz"
+    userImg: "Images/GFeMGHpaAAAnaTF.jpeg",
+    user: "Solo Leveling",
+    username: "sololeveling_en",
+    bio: "Jinwoo's about to become stronger than anyone ever imagined possible. Solo Leveling is streaming now, only on  @Crunchyroll!"
   },
   {
-    userImg: "",
-    user: "Collins",
-    username: "linsxzz"
+    userImg: "Images/profile pics/20231122_172158.jpg",
+    user: "Instablog9ja",
+    username: "instablog",
+    bio: "24/7 News. Fashion. Lifestyle. Entertainment || || Contact Us: instablog9jacs@gmail.com"
   },
   {
-    userImg: "",
-    user: "Collins",
-    username: "linsxzz"
+    userImg: "Images/profile pics/20240107_114844.jpg",
+    user: "Insane Reality Leaks",
+    username: "InsaneReality",
+    bio: "Not the way they taught you"
   },
   {
-    userImg: "",
-    user: "Collins",
-    username: "linsxzz"
+    userImg: "Images/profile pics/20240107_114917.jpg",
+    user: "internet hall of fame",
+    username: "InternetH0F",
+    bio: "alt @TPayst | credit is given when original source is known. if no credit is listed, OP can DM us with credit request"
+  },
+  {
+    userImg: "Images/profile pics/wallpaperflare.com_wallpaper.jpg",
+    user: "Scrimba",
+    username: "scrimba",
+    bio: "Our courses help motivated students become hireable frontend developers at 1% of the price of a coding bootcamp. 🔗 https://linktr.ee/scrimba"
   }
 ]
 messageData = [
   {
+    img: 'Images/profile pics/20240107_114917.jpg',
     name: 'Collins Onuoha',
     username: 'linzxx',
     date: '',
     message: 'This abuja get money o!'
   },
   {
+    img: 'Images/profile pics/20240107_114844.jpg',
     name: 'Anita Onuoha',
     username: 'ezyne',
     date: '',
     message: 'You made me forget my charger'
   },
   {
+    img: 'Images/profile pics/20240310_144314.jpg',
     name: 'Franklin Onuoha',
     username: 'frankwalker',
     date: '',
     message: 'Going to the dentist'
   },
   {
-    name: 'Favour Onuoha',
-    username: 'strictImperfectionz',
-    date: '',
-    message: 'Money don land for the motor'
-  },
-   {
-    name: 'Collins Onuoha',
-    username: 'linzxx',
-    date: '',
-    message: 'This abuja get money o!'
-  },
-  {
-    name: 'Anita Onuoha',
-    username: 'ezyne',
-    date: '',
-    message: 'You made me forget my charger'
-  },
-  {
-    name: 'Franklin Onuoha',
-    username: 'frankwalker',
-    date: '',
-    message: 'Going to the dentist'
-  },
-  {
+    img: 'Images/profile pics/20231231_124613.jpg',
     name: 'Favour Onuoha',
     username: 'strictImperfectionz',
     date: '',
     message: 'Money don land for the motor'
   }
+  
 ]
 
 //functions to render tweets , trends and toFollow sections
@@ -684,7 +720,7 @@ data.forEach((item)=>{
   TweeT.innerHTML = `
       <div class="tweetInfo">
           <div class="profilePic">
-              <img src="images/GFeMGHpaAAAnaTF.jpeg" alt="">
+              <img src="${item.profileImg}" alt="">
           </div>
 
           <div class="tweetContainer">
@@ -713,7 +749,7 @@ data.forEach((item)=>{
                           <i class="fa-regular fa-face-meh-blank"></i>
                       </div>
                       <div class="text">
-                          <span>Add/remove from @movieplug from lists</span>
+                          <span>Add/remove from @${item.username} from lists</span>
                       </div>
                   </div>
                 </div>
@@ -721,10 +757,10 @@ data.forEach((item)=>{
               </div>
 
               <div class="content">
-                  <span class="text">
+                  <p class="text">
                       ${item.tweet}
-                  </span>
-                  <img src="images/wallpaperflare.com_wallpaper (9).jpg" alt="">
+                  </p>
+                  <img src="${item.img}" alt="">
                   <span class="tags">${item.tags}</span>
 
                   <div class="tweetBtns">
@@ -847,7 +883,7 @@ function renderAsideTrends(data , where){
               <span class="text">
                   ${item.topic}
               </span>
-              <span class="post-count">${item.postCount} post</span>
+              <span class="post-count">${item.postCount} posts</span>
           </div>
           <span class="option">
               <i class="fa-solid fa-ellipsis" aria-hidden="true"></i>
@@ -876,7 +912,6 @@ function renderAsideTrends(data , where){
   const tweetOptions = trend.querySelector('.option')
   tweetOptions.addEventListener("click", ()=>{
     tweetOptions.parentElement.children[2].classList.toggle('show-option-table')
-    console.log(tweetOptions.parentElement.children[2])
   })
 
   //escape button function event
@@ -897,10 +932,14 @@ function renderToFollow(data , where){
     toFollow.classList.add('follow')
     toFollow.innerHTML =  `
 
-        <div class="info">
-            <div class="img">
-                <img src="images/GFioD73XwAADcdp.jpeg" alt="">
-            </div>
+<div class="info">
+    <div class="left">
+        <div class="img">
+            <img src="${item.userImg}" alt="">
+        </div>
+    </div>
+    <div class="right">
+        <div class="top">
             <div class="user">
                 <span class="name">
                     ${item.user}
@@ -910,11 +949,15 @@ function renderToFollow(data , where){
                 </span>
                 <span class="username">@${item.username}</span>
             </div>
+            <span class="btn">
+                follow
+            </span>
         </div>
-        <span class="btn">
-            follow
-        </span>
+        <div class="bio">${item.bio}</div>
+    </div>
+</div>
     `
+    
     const follow = toFollow.querySelector('.btn')
     follow.addEventListener("click",()=>{
       if(!follow.classList.contains( "foll" )){
@@ -928,6 +971,19 @@ function renderToFollow(data , where){
 
     // append 
     container.appendChild(toFollow)
+
+
+    // bio data
+    const bio = document.querySelectorAll('.bio')
+    bio.forEach((b)=>{
+      // if(b.parentElement.parentElement.parentElement.parentElement.classList.contains('follow-container')){
+      //   b.style.display = "none"
+      // }
+      b.parentElement.parentElement.parentElement.parentElement.classList.contains('follow-container')  ?  
+      b.style.display='none' : b.style.display= 'block'
+    })
+    // console.log()
+
 })
 }
 function messages(data){
@@ -938,7 +994,7 @@ function messages(data){
 
     message.innerHTML = `
       <div class="img">
-          <img src="images/GFioD73XwAADcdp.jpeg" alt="">
+          <img src="${item.img}" alt="">
       </div>
       <div class="info">
           <div class="top">

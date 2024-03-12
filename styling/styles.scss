@@ -10,7 +10,6 @@ body{
     margin: 0;
     padding: 0;
     background: #000;
-    // font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
     font-family: "Roboto", sans-serif;
 } 
 
@@ -47,7 +46,7 @@ main{
         padding: 7px 0;
 
         .icon{
-            font-size: 27px;
+            font-size: 23px;
             cursor: pointer;
             a{
                 color: #ffffff;
@@ -453,10 +452,11 @@ main{
                             cursor: pointer;
                             border-radius: 100%;
                             padding: 5px 8px;
+                            color: grey;
                             // border: 1px solid red;
                             &:hover {
                                 color: rgb(0, 162, 255);
-                                background: rgba(10, 156, 240, 0.267);
+                                background: rgba(10, 156, 240, 0.1);
                             }
                         }
                         .option-table {
@@ -513,47 +513,55 @@ main{
                     height: 230px;
                     overflow: hidden;
                     .follow {
-                        display: flex;
-                        justify-content: space-between;
-                        align-items: center;
+                        // display: flex;
+                        // justify-content: space-between;
+                        // align-items: center;
                         padding: 12px 0;
     
                         .info {
                             display: flex;
-                            align-items: center;
-    
-                            .img {
-                                width: 50px;
-                                height: 50px;
-                                border-radius: 100%;
-                                overflow: hidden;
-                                margin-right: 10px;
-    
-                                img {
-                                    width: 100%;
-                                }
-                            }
-    
-                            .user {
-                                display: flex;
-                                flex-direction: column;
+                            // align-items: center;
+                            .left{
+                                .img {
+                                    width: 50px;
+                                    height: 50px;
+                                    border-radius: 100%;
+                                    overflow: hidden;
+                                    margin-right: 10px;
         
-                                .name {
-                                    font-weight: 700;
-                                    margin-bottom: 1px;
-        
-                                    .verified {
-                                        color: rgb(0, 132, 209);
+                                    img {
+                                        width: 100%;
                                     }
                                 }
-        
-                                .username {
-                                    color: grey;
-                                    font-size: 14px;
-                                    font-weight: 400;
+                            }
+    
+                            .right{
+                                width: 100% ;
+                                .top{
+                                    display: flex;
+                                    justify-content: space-between;
+                                }
+                                .user {
+                                    display: flex;
+                                    flex-direction: column;
+            
+                                    .name {
+                                        font-weight: 700;
+                                        margin-bottom: 1px;
+            
+                                        .verified {
+                                            color: rgb(0, 132, 209);
+                                        }
+                                    }
+            
+                                    .username {
+                                        color: grey;
+                                        font-size: 14px;
+                                        font-weight: 400;
+                                    }
                                 }
                             }
-        
+                    
                         }
                         .btn {
                             padding: 7px 14px;
@@ -564,7 +572,7 @@ main{
                             font-weight: 600;
                             text-transform: capitalize;
                             color: #000;
-                            margin-left: 10px;
+                            // margin-left: 10px;
                             cursor: pointer;
                         }
     
@@ -656,8 +664,8 @@ main{
                 display: flex;
 
                 .img {
-                    width: 50px;
-                    height: 50px;
+                    width: 60px;
+                    height: 53px;
                     overflow: hidden;
                     border-radius: 100%;
                     margin-right: 20px;
@@ -756,6 +764,7 @@ main{
         
 
         .read {
+            display: none;
             color: $color;
             padding: 15px 0;
             border: 1px solid rgb(83, 83, 83);
@@ -799,9 +808,12 @@ main{
                         .tweetContainer {
                             width: 100%;
                             .info {
+                                display: flex;
+                                align-items: center;
                                 .name {
                                     font-weight: 700;
                                     cursor: pointer;
+                                    padding-right: 5px;
         
                                     &:hover {
                                         text-decoration: underline;
@@ -809,6 +821,7 @@ main{
                                 }
         
                                 .verified {
+                                    padding-right: 5px;
                                     color: rgb(0, 132, 209);
                                 }
         
@@ -818,6 +831,7 @@ main{
                                     text-overflow: clip;
                                     cursor: pointer;
                                     color: gray;
+                                    padding-right: 5px ;
                                 }
         
                                 .dot {
@@ -833,13 +847,14 @@ main{
                                 }
         
                                 .option {
-                                    float: inline-end;
-                                    border-radius: 100%;
+                                    color: grey;
+                                    margin-left: auto;
                                     padding: 5px 8px;
-                                    // border: 1px solid red;
+                                    transition: all 350ms ease-in-out;
                                     &:hover{
+                                        border-radius: 100%;
                                         color: rgb(0, 162, 255); 
-                                        background: rgba(10, 156, 240, 0.267);                           
+                                        background: rgba(10, 156, 240, 0.1);                           
                                     }
                                 }
                                 .option-table{
@@ -868,7 +883,7 @@ main{
                             }
         
                             .content {
-                                padding-right: 19px;
+                                // padding-right: 19px;
                                 .text{
                                     margin: 0;
                                     // white-space: initial;
@@ -917,9 +932,12 @@ main{
                                         cursor: pointer;
                                         color: grey;
                                         font-size: 14px;
-        
-                                        .bookmark,
-                                        .share {
+                                        @media screen and (max-width: 400px) {
+                                            .bookmark{
+                                                display: none;
+                                            }
+                                        }
+                                        .bookmark{
                                             margin-right: 10px;
         
                                             &:hover {
@@ -1046,6 +1064,7 @@ main{
                 }
 
                 .option {
+                    color: grey;
                     cursor: pointer;
                     border-radius: 100%;
                     padding: 5px 8px;
@@ -1053,7 +1072,7 @@ main{
                     // border: 1px solid red;
                     &:hover {
                         color: rgb(0, 162, 255);
-                        background: rgba(10, 156, 240, 0.267);
+                        background: rgba(10, 156, 240, 0.1);
                     }
                 }
 
@@ -1164,26 +1183,39 @@ main{
                 }
             }
             .follow {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
+                // display: flex;
+                // justify-content: space-between;
+                // align-items: center;
                 padding: 12px 0;
 
                 .info {
                     display: flex;
-                    align-items: center;
-
-                    .img {
-                        width: 50px;
-                        height: 50px;
-                        border-radius: 100%;
-                        overflow: hidden;
-                        margin-right: 10px;
-
-                        img {
-                            width: 100%;
+                    // align-items: center;
+                    .left{
+                        .img {
+                            width: 50px;
+                            height: 50px;
+                            border-radius: 100%;
+                            overflow: hidden;
+                            margin-right: 10px;
+    
+                            img {
+                                width: 100%;
+                            }
                         }
                     }
+                    .right{
+                        width: 100%;
+                        .top{
+                            display:  flex;
+                            justify-content: space-between;
+
+                        }
+                        .bio{
+                            margin-top: 5px;
+                        }
+                    }
+
 
                 }
 
@@ -1240,7 +1272,7 @@ main{
     position: absolute;
     bottom: 0;
     right: 51px;
-    max-width: 550px;
+    max-width: 600px;
     height: 55px;
     overflow: hidden;
     border-top-left-radius: 20px;
@@ -1290,10 +1322,9 @@ main{
                 align-items: center;
                 padding: 8px 3px;
                 .img{
-                    width: 50px;
+                    width: 60px;
                     height: 50px;
                     overflow: hidden;
-                    margin-right: 14px;
                     border-radius: 100%;
                     img{
                         width: 100%;
@@ -1301,6 +1332,7 @@ main{
                 }
                 .info{
                     width: 100%;
+                    margin-left: 10px;
                     .top{
                         display: flex;
                         justify-content: space-between;

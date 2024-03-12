@@ -44,7 +44,7 @@ main {
   padding: 7px 0;
 }
 .nav-mobile .nav .icon {
-  font-size: 27px;
+  font-size: 23px;
   cursor: pointer;
 }
 .nav-mobile .nav .icon a {
@@ -402,10 +402,11 @@ main {
   cursor: pointer;
   border-radius: 100%;
   padding: 5px 8px;
+  color: grey;
 }
 #id2 .aside .trends .hot-topic .trend-container .trend .option:hover {
   color: rgb(0, 162, 255);
-  background: rgba(10, 156, 240, 0.267);
+  background: rgba(10, 156, 240, 0.1);
 }
 #id2 .aside .trends .hot-topic .trend-container .trend .option-table {
   display: none;
@@ -451,37 +452,40 @@ main {
   overflow: hidden;
 }
 #id2 .aside .trends .to-follow .follow-container .follow {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding: 12px 0;
 }
 #id2 .aside .trends .to-follow .follow-container .follow .info {
   display: flex;
-  align-items: center;
 }
-#id2 .aside .trends .to-follow .follow-container .follow .info .img {
+#id2 .aside .trends .to-follow .follow-container .follow .info .left .img {
   width: 50px;
   height: 50px;
   border-radius: 100%;
   overflow: hidden;
   margin-right: 10px;
 }
-#id2 .aside .trends .to-follow .follow-container .follow .info .img img {
+#id2 .aside .trends .to-follow .follow-container .follow .info .left .img img {
   width: 100%;
 }
-#id2 .aside .trends .to-follow .follow-container .follow .info .user {
+#id2 .aside .trends .to-follow .follow-container .follow .info .right {
+  width: 100%;
+}
+#id2 .aside .trends .to-follow .follow-container .follow .info .right .top {
+  display: flex;
+  justify-content: space-between;
+}
+#id2 .aside .trends .to-follow .follow-container .follow .info .right .user {
   display: flex;
   flex-direction: column;
 }
-#id2 .aside .trends .to-follow .follow-container .follow .info .user .name {
+#id2 .aside .trends .to-follow .follow-container .follow .info .right .user .name {
   font-weight: 700;
   margin-bottom: 1px;
 }
-#id2 .aside .trends .to-follow .follow-container .follow .info .user .name .verified {
+#id2 .aside .trends .to-follow .follow-container .follow .info .right .user .name .verified {
   color: rgb(0, 132, 209);
 }
-#id2 .aside .trends .to-follow .follow-container .follow .info .user .username {
+#id2 .aside .trends .to-follow .follow-container .follow .info .right .user .username {
   color: grey;
   font-size: 14px;
   font-weight: 400;
@@ -495,7 +499,6 @@ main {
   font-weight: 600;
   text-transform: capitalize;
   color: #000;
-  margin-left: 10px;
   cursor: pointer;
 }
 #id2 .aside .trends .to-follow .showmore {
@@ -567,8 +570,8 @@ main {
   display: flex;
 }
 #id2 .tweetFeed .post-tweet > div .img {
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 53px;
   overflow: hidden;
   border-radius: 100%;
   margin-right: 20px;
@@ -653,6 +656,7 @@ main {
   cursor: pointer;
 }
 #id2 .tweetFeed .read {
+  display: none;
   color: rgb(10, 156, 240);
   padding: 15px 0;
   border: 1px solid rgb(83, 83, 83);
@@ -695,14 +699,20 @@ main {
 #id2 .tweetFeed .main-feed .tweet .tweetInfo .tweetContainer {
   width: 100%;
 }
+#id2 .tweetFeed .main-feed .tweet .tweetInfo .tweetContainer .info {
+  display: flex;
+  align-items: center;
+}
 #id2 .tweetFeed .main-feed .tweet .tweetInfo .tweetContainer .info .name {
   font-weight: 700;
   cursor: pointer;
+  padding-right: 5px;
 }
 #id2 .tweetFeed .main-feed .tweet .tweetInfo .tweetContainer .info .name:hover {
   text-decoration: underline;
 }
 #id2 .tweetFeed .main-feed .tweet .tweetInfo .tweetContainer .info .verified {
+  padding-right: 5px;
   color: rgb(0, 132, 209);
 }
 #id2 .tweetFeed .main-feed .tweet .tweetInfo .tweetContainer .info .username {
@@ -711,6 +721,7 @@ main {
   text-overflow: clip;
   cursor: pointer;
   color: gray;
+  padding-right: 5px;
 }
 #id2 .tweetFeed .main-feed .tweet .tweetInfo .tweetContainer .info .dot {
   font-weight: 900;
@@ -723,13 +734,15 @@ main {
   color: gray;
 }
 #id2 .tweetFeed .main-feed .tweet .tweetInfo .tweetContainer .info .option {
-  float: inline-end;
-  border-radius: 100%;
+  color: grey;
+  margin-left: auto;
   padding: 5px 8px;
+  transition: all 350ms ease-in-out;
 }
 #id2 .tweetFeed .main-feed .tweet .tweetInfo .tweetContainer .info .option:hover {
+  border-radius: 100%;
   color: rgb(0, 162, 255);
-  background: rgba(10, 156, 240, 0.267);
+  background: rgba(10, 156, 240, 0.1);
 }
 #id2 .tweetFeed .main-feed .tweet .tweetInfo .tweetContainer .info .option-table {
   display: none;
@@ -752,9 +765,6 @@ main {
 }
 #id2 .tweetFeed .main-feed .tweet .tweetInfo .tweetContainer .info .show-option-table {
   display: block;
-}
-#id2 .tweetFeed .main-feed .tweet .tweetInfo .tweetContainer .content {
-  padding-right: 19px;
 }
 #id2 .tweetFeed .main-feed .tweet .tweetInfo .tweetContainer .content .text {
   margin: 0;
@@ -798,16 +808,18 @@ main {
   color: grey;
   font-size: 14px;
 }
-#id2 .tweetFeed .main-feed .tweet .tweetInfo .tweetContainer .content .tweetBtns .trafficShareBtns .bookmark,
-#id2 .tweetFeed .main-feed .tweet .tweetInfo .tweetContainer .content .tweetBtns .trafficShareBtns .share {
+@media screen and (max-width: 400px) {
+  #id2 .tweetFeed .main-feed .tweet .tweetInfo .tweetContainer .content .tweetBtns .trafficShareBtns .bookmark {
+    display: none;
+  }
+}
+#id2 .tweetFeed .main-feed .tweet .tweetInfo .tweetContainer .content .tweetBtns .trafficShareBtns .bookmark {
   margin-right: 10px;
 }
-#id2 .tweetFeed .main-feed .tweet .tweetInfo .tweetContainer .content .tweetBtns .trafficShareBtns .bookmark:hover,
-#id2 .tweetFeed .main-feed .tweet .tweetInfo .tweetContainer .content .tweetBtns .trafficShareBtns .share:hover {
+#id2 .tweetFeed .main-feed .tweet .tweetInfo .tweetContainer .content .tweetBtns .trafficShareBtns .bookmark:hover {
   color: rgb(10, 156, 240);
 }
-#id2 .tweetFeed .main-feed .tweet .tweetInfo .tweetContainer .content .tweetBtns .trafficShareBtns .bookmark:hover i,
-#id2 .tweetFeed .main-feed .tweet .tweetInfo .tweetContainer .content .tweetBtns .trafficShareBtns .share:hover i {
+#id2 .tweetFeed .main-feed .tweet .tweetInfo .tweetContainer .content .tweetBtns .trafficShareBtns .bookmark:hover i {
   background: rgba(29, 160, 242, 0.1843137255);
   box-shadow: 0 0 1px 6px rgba(29, 160, 242, 0.1843137255);
 }
@@ -894,13 +906,14 @@ main {
   font-weight: 400;
 }
 #id2 .tweetFeed .full-hot-topic .trend .option {
+  color: grey;
   cursor: pointer;
   border-radius: 100%;
   padding: 5px 8px;
 }
 #id2 .tweetFeed .full-hot-topic .trend .option:hover {
   color: rgb(0, 162, 255);
-  background: rgba(10, 156, 240, 0.267);
+  background: rgba(10, 156, 240, 0.1);
 }
 #id2 .tweetFeed .full-hot-topic .trend .option-table {
   display: none;
@@ -989,24 +1002,30 @@ main {
   font-size: 15px;
 }
 #id2 .tweetFeed .full-to-follow .follow {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding: 12px 0;
 }
 #id2 .tweetFeed .full-to-follow .follow .info {
   display: flex;
-  align-items: center;
 }
-#id2 .tweetFeed .full-to-follow .follow .info .img {
+#id2 .tweetFeed .full-to-follow .follow .info .left .img {
   width: 50px;
   height: 50px;
   border-radius: 100%;
   overflow: hidden;
   margin-right: 10px;
 }
-#id2 .tweetFeed .full-to-follow .follow .info .img img {
+#id2 .tweetFeed .full-to-follow .follow .info .left .img img {
   width: 100%;
+}
+#id2 .tweetFeed .full-to-follow .follow .info .right {
+  width: 100%;
+}
+#id2 .tweetFeed .full-to-follow .follow .info .right .top {
+  display: flex;
+  justify-content: space-between;
+}
+#id2 .tweetFeed .full-to-follow .follow .info .right .bio {
+  margin-top: 5px;
 }
 #id2 .tweetFeed .full-to-follow .follow .user {
   display: flex;
@@ -1049,7 +1068,7 @@ main {
   position: absolute;
   bottom: 0;
   right: 51px;
-  max-width: 550px;
+  max-width: 600px;
   height: 55px;
   overflow: hidden;
   border-top-left-radius: 20px;
@@ -1101,10 +1120,9 @@ main {
   padding: 8px 3px;
 }
 .msg-container .msg .msg-box .message .img {
-  width: 50px;
+  width: 60px;
   height: 50px;
   overflow: hidden;
-  margin-right: 14px;
   border-radius: 100%;
 }
 .msg-container .msg .msg-box .message .img img {
@@ -1112,6 +1130,7 @@ main {
 }
 .msg-container .msg .msg-box .message .info {
   width: 100%;
+  margin-left: 10px;
 }
 .msg-container .msg .msg-box .message .info .top {
   display: flex;
