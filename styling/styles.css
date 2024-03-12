@@ -11,6 +11,38 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+.load {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background: black;
+  z-index: 9999999;
+}
+.load .loader {
+  margin: auto;
+}
+.load .loader i {
+  color: #fff;
+  font-size: 50px;
+  animation: load 2s linear infinite alternate;
+}
+@keyframes load {
+  from {
+    transform: scale(1);
+    opacity: 0.4;
+  }
+  to {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+}
+
+.hide-load {
+  display: none;
+}
+
 main {
   display: flex;
   max-width: -moz-fit-content;

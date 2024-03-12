@@ -1,8 +1,14 @@
 const head = document.querySelector('#header-m')
 const nav = document.querySelector('.nav-mobile')
 const mobileTweet = document.querySelector('.mobile-tweet')
-
+const load = document.querySelector('.load')
 window.addEventListener('DOMContentLoaded', function() {
+  setTimeout(()=>{
+    load.classList.add("hide-load")
+    // Hide loading animation and show the header when the DOM is ready, after a delay of 1 second to avoid flashing on load
+    
+    }, 7000
+  )
   renderTweets(tweetData)
   renderAsideTrends(trendData , `.trend-container`)
   renderToFollow(toFollowData , `.follow-container`)
@@ -95,23 +101,6 @@ inputValues.addEventListener('focusin',()=>{
     }
   })  
 })
-
-
-
-
-
-function time(){
-  
-  count = 0
-  let interval = setInterval(
-    ()=>{
-      inputValues.value = count
-      count++
-    }
-     ,5000);
-}
-// time()
-
 
 function createPostTweet(input){
   const months = [
@@ -359,13 +348,7 @@ mobileTweet.addEventListener('click',()=>{
 closeModal.onclick = () => {
   postModal.style.display = "none"
 }
-// window.addEventListener('resize',()=>{
-//   // postModal.style.display = "none"
-//   if(window.screen.width <= 809 ){
-//     postModal.style.display = "block"
-//   }
-//   console.log(window.screen.width)
-// })
+
 const modalPostBtn = document.querySelector('.post-modal .post-btn')
 const modalInput = document.querySelector('.post-modal .modal-input')
 modalPostBtn.onclick = () => {
