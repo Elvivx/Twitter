@@ -122,33 +122,15 @@ function createPostTweet(input){
       'Nov',
       'Dec'
   ]
-  // const weekdays = [
-  //     'sun',
-  //     'mon',
-  //     'tue',
-  //     'wed',
-  //     'thru',
-  //     'fri',
-  //     'sat',
-  // ]
+  
   let posteddate = new Date()
   const  month = months[posteddate.getMonth()]
-  // const day = weekdays[posteddate.getDay()]
   const date = posteddate.getDate()
-  // const timeStamp = document.querySelector('.timestamp')
   const newdate =  date +' '+ month
-  // timeStamp.textContent = 
-  
-    // console.log(timeStamp)
-  console.log(date,  month)
+
 
   const id = new Date().getTime().toString()
 
-
-  // interaction btn values
-  // likeCount = 0
-  // retweetCount = 0
-  // commentCount = 0
 
   // creating  elements of the tweet
   let textValue = input.value
