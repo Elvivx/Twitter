@@ -689,7 +689,6 @@ main {
   cursor: pointer;
 }
 #id2 .tweetFeed .read {
-  display: none;
   color: rgb(10, 156, 240);
   padding: 15px 0;
   border: 1px solid rgb(83, 83, 83);
@@ -780,7 +779,8 @@ main {
 #id2 .tweetFeed .main-feed .tweet .tweetInfo .tweetContainer .info .option-table {
   display: none;
   position: absolute;
-  right: 8px;
+  right: 23px;
+  top: 20px;
   background: #000;
   border-radius: 15px;
   box-shadow: 0px 0px 6px rgba(255, 255, 255, 0.699);
