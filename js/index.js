@@ -3,12 +3,17 @@ const nav = document.querySelector('.nav-mobile')
 const mobileTweet = document.querySelector('.mobile-tweet')
 const load = document.querySelector('.load')
 window.addEventListener('DOMContentLoaded', function() {
-  setTimeout(()=>{
+  // Hide loading animation and show the header when the DOM is ready, after a delay of 1 second to avoid flashing on load
+  setTimeout(removeload,7000)
+  function removeload(){
+    // load.style = "opacity: 0; "
     load.classList.add("hide-load")
-    // Hide loading animation and show the header when the DOM is ready, after a delay of 1 second to avoid flashing on load
-    
-    }, 7000
-  )
+    load.style = "transform: scale(3090);"
+    // load.style.display = "none"
+    setTimeout(()=>{load.style.display = "none"}, 2000)
+
+  }
+
   renderTweets(tweetData)
   renderAsideTrends(trendData , `.trend-container`)
   renderToFollow(toFollowData , `.follow-container`)
